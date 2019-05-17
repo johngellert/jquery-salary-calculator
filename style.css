@@ -1,0 +1,37 @@
+body {
+
+}
+
+.container {
+    font-family: sans-serif;
+}
+
+header {
+    background-color: gray;
+    height: 150px;
+}
+
+h1 {
+    color: white;
+    
+    font-size: 3em;
+    text-align: center;
+    margin: 10px auto;
+}
+
+
+
+.submitButton {
+    background-color: lightgrey;
+    font-size: 24px;
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    border: solid 2px black;
+    float: right;
+
+}
+
+table, th, td {
+    border: 2px solid black
+}
