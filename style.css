@@ -1,9 +1,10 @@
 body {
-
+    font-family: sans-serif;
 }
 
 .container {
-    font-family: sans-serif;
+    width: 800px;
+    margin: 0px auto;
 }
 
 header {
@@ -16,6 +17,59 @@ h1 {
     
     font-size: 3em;
     text-align: center;
+    margin: 10px auto;
+}
+
+.inputFieldsContainer {
+    justify-content: space-between;
+}
+
+.firstName {
+    border: 2px solid black;
+    height: 50px;
+    width: 150px;
+    margin: 5px 5px 5px 5px;
+    font-size: 24px;
+    padding-left: 10px;
+}
+
+.lastName {
+    border: 2px solid black;
+    height: 50px;
+    width: 150px;
+    margin: 5px 5px 5px 5px;
+    font-size: 24px;
+    padding-left: 10px;
+}
+
+.id {
+    border: 2px solid black;
+    height: 50px;
+    width: 150px;
+    margin: 5px 5px 5px 5px;
+    font-size: 24px;
+    padding-left: 10px;
+}
+
+.title {
+    border: 2px solid black;
+    height: 50px;
+    width: 150px;
+    margin: 5px 5px 5px 5px;
+    font-size: 24px;
+    padding-left: 10px;
+}
+
+.annualSalary {
+    border: 2px solid black;
+    height: 50px;
+    width: 150px;
+    margin: 5px 5px 5px 5px;
+    font-size: 24px;
+    padding-left: 10px;
+}
+
+.submitButtonContainer {
     margin: 10px auto;
 }
 
@@ -33,5 +87,5 @@ h1 {
 }
 
 table, th, td {
-    border: 2px solid black
+    border: 2px solid black;
 }
