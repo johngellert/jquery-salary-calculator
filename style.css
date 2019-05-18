@@ -3,7 +3,7 @@ body {
 }
 
 .container {
-    width: 800px;
+    width: 1200px;
     margin: 0px auto;
 }
 
@@ -14,63 +14,54 @@ header {
 
 h1 {
     color: white;
-    
     font-size: 3em;
     text-align: center;
     margin: 10px auto;
 }
 
+.inputContainer {
+    width: 95%;
+}
+
 .inputFieldsContainer {
     justify-content: space-between;
+    display: flex;
 }
 
 .firstName {
     border: 2px solid black;
-    height: 50px;
-    width: 150px;
-    margin: 5px 5px 5px 5px;
+    width: 200px;
     font-size: 24px;
     padding-left: 10px;
+
 }
 
 .lastName {
     border: 2px solid black;
-    height: 50px;
-    width: 150px;
-    margin: 5px 5px 5px 5px;
+    width: 200px;
     font-size: 24px;
     padding-left: 10px;
 }
 
 .id {
     border: 2px solid black;
-    height: 50px;
-    width: 150px;
-    margin: 5px 5px 5px 5px;
+    width: 200px;
     font-size: 24px;
     padding-left: 10px;
 }
 
 .title {
     border: 2px solid black;
-    height: 50px;
-    width: 150px;
-    margin: 5px 5px 5px 5px;
+    width: 200px;
     font-size: 24px;
     padding-left: 10px;
 }
 
 .annualSalary {
     border: 2px solid black;
-    height: 50px;
-    width: 150px;
-    margin: 5px 5px 5px 5px;
+    width: 200px;
     font-size: 24px;
     padding-left: 10px;
-}
-
-.submitButtonContainer {
-    margin: 10px auto;
 }
 
 
@@ -78,9 +69,9 @@ h1 {
 .submitButton {
     background-color: lightgrey;
     font-size: 24px;
-    height: 50px;
     width: 150px;
     border-radius: 10px;
+    margin-top: 10px;
     border: solid 2px black;
     float: right;
 
