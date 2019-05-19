@@ -10,6 +10,8 @@ body {
 header {
     background-color: gray;
     height: 150px;
+    padding-top: 50px;
+
 }
 
 h1 {
@@ -20,7 +22,13 @@ h1 {
 }
 
 .inputContainer {
-    width: 95%;
+    display: block;
+    border: 2px solid black;
+    height: 100px;
+}
+
+h2 {
+    background: green;
 }
 
 .inputFieldsContainer {
@@ -64,19 +72,16 @@ h1 {
     padding-left: 10px;
 }
 
-
-
 .submitButton {
     background-color: lightgrey;
     font-size: 24px;
     width: 150px;
     border-radius: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
     border: solid 2px black;
     float: right;
-
 }
 
-table, th, td {
+/* table, th, td {
     border: 2px solid black;
-}
+} */
