@@ -15,8 +15,11 @@ header {
 h1 {
     color: white;
     font-size: 3em;
+    font-weight: 500;
     text-align: center;
-    margin: 25px auto;
+    margin: 0px auto;
+    padding: 22px;
+
 }
 
 .inputContainer {
@@ -25,7 +28,8 @@ h1 {
 }
 
 h2 {
-    background: green;
+    font-size: 32px;
+    font-weight: normal;
 }
 
 .inputFieldsContainer {
@@ -100,9 +104,11 @@ table, th, td {
 
 th {
     height: 50px;
-    background-color: lightgrey;
+    background-color: rgb(173, 173, 173);
     text-align: left;
     padding-left: 10px;
+    font-weight: normal;
+    vertical-align: middle;
 }
 
 td {
@@ -111,7 +117,7 @@ td {
 }
 
 tr:nth-child(even){
-    background-color: rgb(138, 138, 138);
+    background-color: lightgrey;
 }
 
 #salaryColumn {
@@ -129,11 +135,11 @@ tr:nth-child(even){
 
 .monthlyCostHeader {
     float: right;
-    font-size: 28px;
+    font-size: 32px;
     margin-top: 20px;
 }
 
 #monthlyCost {
     display: inline-block;
-    font-size: 28px;
+    font-size: 32px;
 }

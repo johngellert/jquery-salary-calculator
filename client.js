@@ -26,7 +26,7 @@ function handleSubmitClick() {
     // $('.title').val('');
     // $('.annualSalary').val('');
     
-    totalMonthlyCost += parseInt(annualSalary);
+    totalMonthlyCost += parseInt(annualSalary)/12;
 
     updateTotalMonthly(totalMonthlyCost);
 
@@ -57,5 +57,8 @@ function updateTotalMonthly(totalMonthlyCostOut){
    if(totalMonthlyCost > 20000){
        $('#monthlyCost').css('background-color', 'red');
    } 
+   else{
+    $('#monthlyCost').css('background-color', 'transparent');
+   }
     $('#monthlyCost').text(totalMonthlyCostOut);
 }
