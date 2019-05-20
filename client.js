@@ -18,15 +18,22 @@ function handleSubmitClick() {
     const title = $('.title').val();
     const annualSalary = $('.annualSalary').val();
 
-    addToEmployeeTable(firstName, lastName, id, title, annualSalary);
-    
-    // $('.firstName').val('');
-    // $('.lastName').val('');
-    // $('.id').val('');
-    // $('.title').val('');
-    // $('.annualSalary').val('');
-    
-    totalMonthlyCost += parseInt(annualSalary)/12;
+    $('.firstName').val('');
+    $('.lastName').val('');
+    $('.id').val('');
+    $('.title').val('');
+    $('.annualSalary').val('');
+
+    if(validateInputData(firstName, lastName, id, title, annualSalary)) {
+        return;
+    }
+
+    let annualSalarayFormated = parseInt(annualSalary);
+    annualSalarayFormated = annualSalarayFormated.toLocaleString();
+
+    addToEmployeeTable(firstName, lastName, id, title, annualSalarayFormated);
+
+    totalMonthlyCost += parseInt(annualSalary) / 12;
 
     updateTotalMonthly(totalMonthlyCost);
 
@@ -40,7 +47,7 @@ function addToEmployeeTable(firstOut, lastOut, idOut, titleOut, salaryOut) {
         <td>${lastOut}</td>
         <td>${idOut}</td>
         <td>${titleOut}</td>
-        <td id="salaryColumn">${salaryOut}</td>
+        <td id="salaryColumn">$ ${salaryOut}</td>
         <td id="deleteColumn">
             <button class="deleteButton">Delete</button>
         </td>
@@ -50,15 +57,45 @@ function addToEmployeeTable(firstOut, lastOut, idOut, titleOut, salaryOut) {
 
 function handleDeleteButton() {
     $(this).closest('tr').remove();
-    console.log('delete');
+    console.log(deleteMonthlyCost);
 }
 
-function updateTotalMonthly(totalMonthlyCostOut){
-   if(totalMonthlyCost > 20000){
-       $('#monthlyCost').css('background-color', 'red');
-   } 
-   else{
-    $('#monthlyCost').css('background-color', 'transparent');
-   }
+function updateTotalMonthly(totalMonthlyCostOut) {
+    if (totalMonthlyCost > 20000) {
+        $('#monthlyCost').css('background-color', 'red');
+    }
+    else {
+        $('#monthlyCost').css('background-color', 'transparent');
+    }
+
+    totalMonthlyCostOut = totalMonthlyCostOut.toFixed(2);
+    totalMonthlyCostOut = parseFloat(totalMonthlyCostOut);
+    totalMonthlyCostOut = totalMonthlyCostOut.toLocaleString();
+    // updates the total monthly cost and only allows two decimal places
     $('#monthlyCost').text(totalMonthlyCostOut);
 }
+
+function validateInputData(first, last, id, title, salary) {
+    if (!first) {
+        alert("Please complete all fields");
+        return true;
+    }
+    else if (!last) {
+        alert("Please complete all fields");
+        return true;
+    }
+    else if (!id) {
+        alert("Please complete all fields");
+        return true;
+    }
+    else if (!title) {
+        alert("Please complete all fields");
+        return true;
+    }
+    else if (!salary) {
+        alert("Please complete all fields");
+        return true;
+    }
+
+}
+
